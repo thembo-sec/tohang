@@ -1422,6 +1422,7 @@ dependencies = [
  "anyhow",
  "async-std",
  "clap 3.2.1",
+ "dotenv",
  "futures",
  "paw",
  "sqlx",

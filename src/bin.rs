@@ -1,6 +1,9 @@
 #![allow(unused)]
 
 use clap::Parser;
+use tohang_lib;
+use dotenv::dotenv;
+use std::env;
 
 #[derive(Parser)]
 struct Cli {
@@ -26,5 +29,8 @@ struct Cli {
 }
 
 fn main() {
+    let DATABASE_URL = "sqlite:db.db";
+    env::set_var(DATABASE_URL, "1");
+
     let cli = Cli::parse();
 }
