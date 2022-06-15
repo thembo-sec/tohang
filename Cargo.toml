@@ -7,3 +7,17 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "3.2.1", features = ["derive"] }
+anyhow = "1.0"
+async-std = { version = "1.8.0", features = [ "attributes" ] }
+futures = "0.3"
+paw = "1.0"
+sqlx = {features = ["sqlite", "runtime-async-std-native-tls"] }
+structopt = { version = "0.3", features = ["paw"] }
+
+[[bin]]
+name = "tohang"
+path = "src/bin.rs"
+
+[lib]
+name = "tohang_lib"
+path = "src/lib/lib.rs"
