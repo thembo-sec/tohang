@@ -30,8 +30,8 @@ struct Cli {
 
 fn main() {
     // TODO fix relative url
-    let DATABASE_URL = "sqlite:db.db";
-    env::set_var(DATABASE_URL, "1");
+    // let DATABASE_URL = "sqlite:db.db";
+    // env::set_var(DATABASE_URL, "1");
 
     let cli = Cli::parse();
 }
